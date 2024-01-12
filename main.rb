@@ -1,4 +1,5 @@
 require_relative "mimir/mimir"
+require "naturally"
 
 MY_AWESOME_BUBBLE_SORTER = Mimir::Sorters::MyBubbleSorter.new
 MY_AWESOME_BUBBLE_SORTER.introduce
@@ -25,4 +26,6 @@ releases = [
 
 # Sort by version number
 sorted = Naturally.sort(releases, by: :version)
-p sorted
+sorted.each do |release|
+  puts release.name
+end
