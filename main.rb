@@ -1,8 +1,12 @@
 require_relative "lib/bubble_sort"
 require_relative "lib/my_friends_bubble_sort"
 
-p bubble_sort([4,3,78,2,0,2])
-# => [0,2,2,3,4,78]
-p bubble_sort([4,3,78,2,0,2].shuffle)
-p bubble_sort([9, 6, 5, 4, 3, 1])
-p bubble_sort([9, 6, 5, 4, 3, 1].shuffle)
+MY_AWESOME_BUBBLE_SORTER = Mimir::Sorters::MyBubbleSorter.new
+MY_AWESOME_BUBBLE_SORTER.introduce
+p MY_AWESOME_BUBBLE_SORTER.sort([4,3,78,2,0,2])
+p MY_AWESOME_BUBBLE_SORTER.sort([9, 6, 5, 4, 3, 1])
+
+MY_FRIENDS_AWESOME_BUBBLE_SORTER = Mimir::Sorters::MyFriendsBubbleSorter.new
+MY_FRIENDS_AWESOME_BUBBLE_SORTER.introduce
+p MY_FRIENDS_AWESOME_BUBBLE_SORTER.sort([4,3,78,2,0,2].shuffle)
+p MY_FRIENDS_AWESOME_BUBBLE_SORTER.sort([9, 6, 5, 4, 3, 1].shuffle)
