@@ -1,5 +1,4 @@
-require_relative "lib/bubble_sort"
-require_relative "lib/my_friends_bubble_sort"
+require_relative "mimir/mimir"
 
 MY_AWESOME_BUBBLE_SORTER = Mimir::Sorters::MyBubbleSorter.new
 MY_AWESOME_BUBBLE_SORTER.introduce
